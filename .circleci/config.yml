@@ -32,10 +32,17 @@ jobs:
       - run:
           name: install-npm-wee
           command: npm install
+<<<<<<< HEAD
+=======
+      - run:
+          name: test-run
+          command: npm run test
+>>>>>>> 57265e5ab588e4b000a9f3e3a126f752ddb0b8bc
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
             - ./node_modules
+<<<<<<< HEAD
   deploy:
     docker:
       - image:  circleci/node:10.16.3
@@ -43,4 +50,6 @@ jobs:
       - run:
           name: deploy-application
           command: ssh -o StrictHostKeyChecking=no $EC2_USERNAME'EC2_PUCLIC_DNS "rm -rf ExampleApplication/;git clone https://github.com/Carrick7/ExampleApplication.git; source ExampleApplication/deploy.sh"
+=======
+>>>>>>> 57265e5ab588e4b000a9f3e3a126f752ddb0b8bc
       
