@@ -8,5 +8,7 @@ pm2 stop ExampleApplication
 cd ExampleApplication/
 # Install application dependencies
 npm install
+# pm2 save error
+sudo pm2 save
 # Start the applciation with the process name ExampleApplication using pm2
 pm2 start ./bin/www --name ExampleApplication
